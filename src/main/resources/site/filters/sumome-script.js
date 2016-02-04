@@ -11,11 +11,15 @@ exports.responseFilter = function(req, res) {
   // Get our SumoMe ID from config
   var sumomeId = siteConfig['sumomeId'] || null;
 
+  // Is Enonic in live mode?
+  var live = (req.mode == 'live');
+
   if ( sumomeId ) {
 
     // Preper params to send into Thymeleaf
     var params = {
-        sumomeId: sumomeId
+        sumomeId: sumomeId,
+        live: live
     };
 
     // Render our html with Thyemleaf
