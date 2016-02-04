@@ -9,14 +9,11 @@ exports.responseFilter = function(req, res) {
     var siteConfig = libs.portal.getSiteConfig();
 
     // Get our SumoMe ID from config
-    var sumomeId = "";
-    if (siteConfig['sumomeId']) {
-        sumomeId = siteConfig['sumomeId'];
-    }
+    var sumomeId = siteConfig['sumomeId'] || "";
 
     // Preper params to send into Thymeleaf
     var params = {
-        id: sumomeId
+        sumomeId: sumomeId
     };
 
     // Render our html with Thyemleaf
