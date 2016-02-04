@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
 	<config>
-		<field-set name="settings">
-			<label>Settings</label>
-			<items>
-				<input name="sumomeId" type="TextLine">
-					<label>SumoMe ID</label>
-					<occurrences minimum="0" maximum="1"/>
-				</input>
-			</items>
-		</field-set>
+		<input name="sumomeId" type="TextLine">
+			<label>SumoMe ID</label>
+			<occurrences minimum="0" maximum="1"/>
+		</input>
 	</config>
 	<filters>
     	<response-filter name="sumome-script" order="50"/>
