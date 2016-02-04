@@ -25,9 +25,9 @@ That's all you need. The html source code will now get the SumoMe script added t
 | 1.0.0 | 6.3.1 |
 
 ## Changelog
-###Version 1.0.0
 
-Release of the app.
+**Version 1.0.0**
+* Release of the app.
 
 ## Notes
 
