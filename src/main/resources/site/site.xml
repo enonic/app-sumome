@@ -4,7 +4,7 @@
 		<field-set name="settings">
 			<label>Settings</label>
 			<items>
-				<input name="sumome-id" type="TextLine">
+				<input name="sumomeId" type="TextLine">
 					<label>SumoMe ID</label>
 					<occurrences minimum="0" maximum="1"/>
 				</input>
