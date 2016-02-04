@@ -1,15 +1,17 @@
 var libs = {
-    portal: require('/lib/xp/portal'),
-    thymeleaf: require('/lib/xp/thymeleaf')
+  portal: require('/lib/xp/portal'),
+  thymeleaf: require('/lib/xp/thymeleaf')
 };
 
 var view = resolve('sumome-script.html');
 
 exports.responseFilter = function(req, res) {
-    var siteConfig = libs.portal.getSiteConfig();
+  var siteConfig = libs.portal.getSiteConfig();
 
-    // Get our SumoMe ID from config
-    var sumomeId = siteConfig['sumomeId'] || "";
+  // Get our SumoMe ID from config
+  var sumomeId = siteConfig['sumomeId'] || null;
+
+  if ( sumomeId ) {
 
     // Preper params to send into Thymeleaf
     var params = {
@@ -33,9 +35,11 @@ exports.responseFilter = function(req, res) {
         log.error("Exception: " + e.message);
     }
 /*
-    if (req.params.debug === 'true') {
-        res.applyFilters = false; // Skip other filters
-    }
+  if (req.params.debug === 'true') {
+      res.applyFilters = false; // Skip other filters
+  }
 */
-    return res;
+  }
+
+  return res;
 };
