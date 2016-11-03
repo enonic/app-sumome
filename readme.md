@@ -22,9 +22,13 @@ That's all you need. The html source code will now get the SumoMe script added t
 
 | Version        | XP version |
 | ------------- | ------------- |
+| 1.0.1 | 6.7.3 |
+| ------------- | ------------- |
 | 1.0.0 | 6.3.1 |
 
 ## Changelog
+**Version 1.0.0**
+* Upgrade to 6.7.3 
 
 **Version 1.0.0**
 * Release of the app.
