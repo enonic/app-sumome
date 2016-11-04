@@ -23,11 +23,10 @@ That's all you need. The html source code will now get the SumoMe script added t
 | Version        | XP version |
 | ------------- | ------------- |
 | 1.0.1 | 6.7.3 |
-| ------------- | ------------- |
 | 1.0.0 | 6.3.1 |
 
 ## Changelog
-**Version 1.0.0**
+**Version 1.0.1**
 * Upgrade to 6.7.3 
 
 **Version 1.0.0**
@@ -35,4 +34,4 @@ That's all you need. The html source code will now get the SumoMe script added t
 
 ## Notes
 
-* The SumoMe script won't be generated when inside the admin console or in preview mode.
+* The SumoMe script won't be generated when inside the admin console or in preview mode. This is by design.
