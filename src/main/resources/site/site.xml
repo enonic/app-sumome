@@ -5,6 +5,15 @@
 			<label>SumoMe ID</label>
 			<occurrences minimum="0" maximum="1"/>
 		</input>
+		<input name="embed" type="RadioButton">
+		  <label>Embedding type</label>
+		  <occurrences minimum="0" maximum="0"/>
+		  <config>
+		    <option value="legacy">In &lt;head&gt;</option>
+		    <option value="modern">In &lt;body&gt;</option>
+		  </config>
+		  <default>modern</default>
+		</input>
 	</config>
 	<filters>
     	<response-filter name="sumome-script" order="50"/>
