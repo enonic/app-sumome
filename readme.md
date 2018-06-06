@@ -15,6 +15,7 @@ app will now be available to add to your websites through the Content Manager ap
 * Add this app to your XP site.
 * Edit the *site content* and add the SumoMe App with the "Applications" dropdown selector.
 * Add the SumoMe ID to the app configuration.
+* Select "head" or "body" mode for injecting the embed code.
 
 That's all you need. The html source code will now get the SumoMe script added to it's head.
 
@@ -22,12 +23,16 @@ That's all you need. The html source code will now get the SumoMe script added t
 
 | Version        | XP version |
 | ------------- | ------------- |
+| 1.1.0 | 6.7.3 |
 | 1.0.1 | 6.7.3 |
 | 1.0.0 | 6.3.1 |
 
 ## Changelog
+**Version 1.1.0**
+* Option to generate embed code in legacy (head) or modern (body) way - default is legacy, to maintain backward compatibility.
+
 **Version 1.0.1**
-* Upgrade to 6.7.3 
+* Upgrade to 6.7.3 .
 
 **Version 1.0.0**
 * Release of the app.
