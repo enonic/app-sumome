@@ -1,25 +1,13 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-        maven {
-            url 'http://repo.enonic.com/public'
-        }
-    }
-
-    dependencies {
-        classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
-    }
+plugins {
+    id 'com.enonic.xp.app' version '1.1.0'
 }
-
-apply plugin: 'com.enonic.xp.app'
-apply plugin: 'maven-publish'
 
 app {
     name = project.appName
-    displayName = project.displayName
+    displayName = 'SumoMe App'
     vendorName = 'Enonic AS'
     vendorUrl = 'http://enonic.com'
+    systemVersion = "${xpVersion}"
 }
 
 dependencies {
@@ -32,20 +20,5 @@ dependencies {
 repositories {
     mavenLocal()
     jcenter()
-    maven {
-        url 'http://repo.enonic.com/public'
-    }
-}
-
-publishing {
-  publications {
-    mavenJava( MavenPublication ) {
-      from components.java
-    }
-  }
-  repositories {
-    maven {
-      url 'http://repo.enonic.net/artifactory/public'
-    }
-  }
+    xp.enonicRepo()
 }

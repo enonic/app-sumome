@@ -30,6 +30,7 @@ That's all you need. The html source code will now get the SumoMe script added t
 ## Changelog
 **Version 1.1.0**
 * Option to generate embed code in legacy (head) or modern (body) way - default is legacy, to maintain backward compatibility.
+* Upgrade to Gradle 4
 
 **Version 1.0.1**
 * Upgrade to 6.7.3 .
