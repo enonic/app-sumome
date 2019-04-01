@@ -1,12 +1,12 @@
 var libs = {
   portal: require('/lib/xp/portal'),
-  thymeleaf: require('/lib/xp/thymeleaf')
+  thymeleaf: require('/lib/thymeleaf')
 };
 
 var viewLegacy = resolve('sumome-script.html');
 var viewModern = resolve('sumome-script-modern.html');
 
-exports.responseFilter = function(req, res) {
+exports.responseProcessor = function(req, res) {
   var siteConfig = libs.portal.getSiteConfig();
 
   // Get our SumoMe ID from config
@@ -23,7 +23,7 @@ exports.responseFilter = function(req, res) {
         sumomeId: sumomeId,
         live: live
     };
-
+    debugger;
 	 var view;
 	 if (sumomeType === 'legacy') {
 		view = viewLegacy;
