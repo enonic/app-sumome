@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-	<config>
+	<form>
 		<input name="sumomeId" type="TextLine">
 			<label>SumoMe ID</label>
 			<occurrences minimum="0" maximum="1"/>
@@ -10,12 +10,12 @@
 		  <occurrences minimum="0" maximum="0"/>
 		  <config>
 		    <option value="legacy">In &lt;head&gt;</option>
-		    <option value="modern">In &lt;body&gt;</option>
+		    <option value="modern">In &lt;body&gt; (recommended)</option>
 		  </config>
 		  <default>modern</default>
 		</input>
-	</config>
-	<filters>
-    	<response-filter name="sumome-script" order="50"/>
-	</filters>
+	</form>
+	<processors>
+    	<response-processor name="sumome-script" order="50"/>
+	</processors>
 </site>
