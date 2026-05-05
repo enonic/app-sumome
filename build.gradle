@@ -1,27 +1,19 @@
 plugins {
     id 'com.enonic.defaults' version '2.1.6'
-    id 'com.enonic.xp.app' version '3.6.2'
+    id 'com.enonic.xp.app'
     id 'maven-publish'
 }
 
-app {
-    name = "${appName}"
-    displayName = "${appDisplayName}"
-    vendorName = "${vendorName}"
-    vendorUrl = "${vendorUrl}"
-    systemVersion = "${xpVersion}"
-}
-
 dependencies {
-    implementation "com.enonic.xp:core-api:${xpVersion}"
-    implementation "com.enonic.xp:portal-api:${xpVersion}"
-    include "com.enonic.xp:lib-portal:${xpVersion}"
-    include "com.enonic.lib:lib-thymeleaf:2.1.1"
-    include 'com.enonic.lib:lib-util:3.1.1'
+    implementation xplibs.api.core
+    implementation xplibs.api.portal
+    include xplibs.portal
+    include libs.lib.thymeleaf
+    include libs.lib.util
 }
 
 repositories {
     mavenLocal()
     mavenCentral()
-    xp.enonicRepo()
+    xp.enonicRepo( "dev" )
 }
