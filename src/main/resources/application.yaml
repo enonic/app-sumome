@@ -1,0 +1,5 @@
+kind: "Application"
+title: "SumoMe App"
+description: "Add the SumoMe-script to your website."
+vendorName: "Enonic"
+vendorUrl: "https://enonic.com"

@@ -1,0 +1,20 @@
+kind: "CMS"
+form:
+  - type: "TextLine"
+    name: "sumomeId"
+    label: "SumoMe ID"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "RadioButton"
+    name: "embed"
+    label: "Embedding type"
+    occurrences:
+      min: 0
+      max: 0
+    options:
+      - value: "legacy"
+        label: "In <head>"
+      - value: "modern"
+        label: "In <body> (recommended)"
+    default: "modern"
