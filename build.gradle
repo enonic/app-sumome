@@ -9,7 +9,6 @@ dependencies {
     implementation xplibs.api.portal
     include xplibs.portal
     include libs.lib.thymeleaf
-    include libs.lib.util
 }
 
 repositories {
