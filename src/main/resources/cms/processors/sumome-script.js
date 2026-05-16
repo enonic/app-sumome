@@ -1,6 +1,5 @@
 var libPortal = require('/lib/xp/portal');
 var libThymeleaf = require('/lib/thymeleaf');
-var libUtil = require('/lib/util');
 
 var viewLegacy = resolve('sumome-script.html');
 var viewModern = resolve('sumome-script-modern.html');
@@ -24,10 +23,10 @@ exports.responseProcessor = function(req, res) {
 
 		// Add it to the response source code
 		if (sumomeType === 'legacy') {
-			res.pageContributions.headEnd = libUtil.data.forceArray(res.pageContributions.headEnd);
+			res.pageContributions.headEnd = (Array.isArray(res.pageContributions.headEnd) ? res.pageContributions.headEnd : [res.pageContributions.headEnd]);
 			res.pageContributions.headEnd.push(metadata);
 		} else {
-			res.pageContributions.bodyEnd = libUtil.data.forceArray(res.pageContributions.bodyEnd);
+			res.pageContributions.bodyEnd = (Array.isArray(res.pageContributions.bodyEnd) ? res.pageContributions.bodyEnd : [res.pageContributions.bodyEnd]);
 			res.pageContributions.bodyEnd.push(metadata);
 		}
 	}
